@@ -16,8 +16,6 @@ export default function Quiz() {
 
   /** next button event handler */
   function onNext() {
-    console.log('On next Click');
-
     /** update the trace value by one using MoveNextAction */
     if (trace < queue.length) {
       dispatch(MoveNextQuestion());
@@ -29,8 +27,7 @@ export default function Quiz() {
     }
 
     /** insert the value of the checked variable */
-    setChecked(undefined)
-
+    setChecked(undefined);
   }
 
   /** prev button event handler */
@@ -39,11 +36,9 @@ export default function Quiz() {
       /** increase the trace value by one using MoveNextAction */
       dispatch(MovePrevQuestion());
     }
-    console.log('On prev Click');
   }
 
   function onChecked(check) {
-    console.log(check);
     setChecked(check);
   }
 
