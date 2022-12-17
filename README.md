@@ -1,4 +1,4 @@
-# Quiz App
+# MERN STACK Quiz App
 
 ## Technologies
 - ReactJs
@@ -7,5 +7,5 @@
 - Mondo DB
 
 ## Arcitecture
-We are using client for front end.
-We are using server for backend.
+We are using client folder for front end.
+We are using server folder for backend.
