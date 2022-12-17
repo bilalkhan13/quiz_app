@@ -10,7 +10,7 @@ export default function ResultTable() {
         setData(res);
       }
     );
-  });
+  }, [setData]);
   return (
     <div>
       <table>
@@ -24,14 +24,16 @@ export default function ResultTable() {
         </thead>
         <tbody>
           {!data ?? <div>No Data Found</div>}
-          {data.map((value, index) => (
-            <tr className="table-body" key={index}>
-              <td>{value?.username || ''}</td>
-              <td>{value?.attempts || 0}</td>
-              <td>{value?.points || 0}</td>
-              <td>{value?.achived || ''}</td>
-            </tr>
-          ))}
+          {data
+            .map((value, index) => (
+              <tr className="table-body" key={index}>
+                <td>{value?.username || ''}</td>
+                <td>{value?.attempts || 0}</td>
+                <td>{value?.points || 0}</td>
+                <td>{value?.achived || ''}</td>
+              </tr>
+            ))
+            .reverse()}
         </tbody>
       </table>
     </div>
